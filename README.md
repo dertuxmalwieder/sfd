@@ -22,7 +22,9 @@ then (if applicable) go to the source directory, then
 
 ## Usage
 
-    sfd -url <URL> -target <TARGET DIRECTORY>
+Assuming there is a manual page with shiny pictures on `example.com/shiny-manual.htm` which you want to download into the current directory:
 
-`-target` defaults to your home directory though.
+    sfd -url "https://example.com/shiny-manual.htm" -target .
+
+`-target` defaults to your home directory.
 
