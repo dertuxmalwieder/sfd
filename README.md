@@ -1,4 +1,4 @@
-[![Scc Count Badge](https://sloc.xyz/github/dertuxmalwieder/sfd?category=code)](https://github.com/dertuxmalwieder/rssfs) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/GebtmireuerGeld)
+[![Scc Count Badge](https://sloc.xyz/github/dertuxmalwieder/sfd?category=code)](https://github.com/dertuxmalwieder/sfd) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/GebtmireuerGeld)
 
 # sfd
 
