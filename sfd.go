@@ -166,8 +166,9 @@ func main() {
 		// Download and append:
 		css, csserr := http.Get(cssPath)
 		if csserr != nil {
-			// Skip this script.
+			// Skip this stylesheet.
 			fmt.Printf("Skipping '%s': %s\n", cssPath, csserr)
+			return groups[0]
 		}
 		defer css.Body.Close()
 		
@@ -195,6 +196,7 @@ func main() {
 		if jserr != nil {
 			// Skip this script.
 			fmt.Printf("Skipping '%s': %s\n", jsPath, jserr)
+			return groups[0]
 		}
 		defer js.Body.Close()
 		
