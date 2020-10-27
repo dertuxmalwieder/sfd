@@ -163,7 +163,7 @@ func main() {
 		return fmt.Sprintf("<img %s src=\"data:image/%s;base64,%s\" %s />", groups[2], imageType, encoded, groups[5])
 	})
 	
-	// 3. Inline CSS and JS in <respStringWithNoImages>.
+	// 2. Inline CSS in <respStringWithNoImages>.
 	fmt.Println("Converting CSS.")
 	reImgCss := regexp.MustCompile("(?:<link (.*?rel=\"stylesheet\".*?href=\"([^\"]+)\".*?|.*?href=\"([^\"]+)\".*?rel=\"stylesheet\".*?)>)")
 	respStringWithNoCSS := ReplaceAllStringSubmatchFunc(reImgCss, respStringWithNoImages, func(groups []string) string {
@@ -192,7 +192,8 @@ func main() {
 		
 		return fmt.Sprintf("\n<style type='text/css'>%s</style>\n", content)
 	})
-	
+
+	// 3. Inline JavaScript in <respStringWithNoCSS>.	
 	fmt.Println("Converting JavaScript.")
 	reImgJs := regexp.MustCompile("(?:<script [^>]*?src=\"([^\"]+)\")[^>]*?>")
 	respStringWithNoExternalResources := ReplaceAllStringSubmatchFunc(reImgJs, respStringWithNoCSS, func(groups []string) string {
