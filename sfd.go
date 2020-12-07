@@ -160,7 +160,7 @@ func main() {
 		encoded := base64.StdEncoding.EncodeToString(content)
 
 		// Keep the parts before and after "src=" for the result.
-		return fmt.Sprintf("<img %s src=\"data:image/%s;base64,%s\" %s />", groups[2], imageType, encoded, groups[5])
+		return fmt.Sprintf("<img %s src=\"data:%s;base64,%s\" %s />", groups[2], imageType, encoded, groups[5])
 	})
 	
 	// 2. Inline CSS in <respStringWithNoImages>.
