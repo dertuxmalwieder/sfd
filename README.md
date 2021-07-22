@@ -10,7 +10,7 @@ An Single File (Web) Downloader.
 
 ## Building
 
-    fossil clone https://code.rosaelefanten.org/sfd sfd.fossil ; fossil open sfd.fossil
+    fossil clone https://code.rosaelefanten.org/sfd
 
 or
 
