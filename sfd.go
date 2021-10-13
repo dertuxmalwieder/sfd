@@ -140,6 +140,8 @@ func main() {
 			imageType = "image/jpeg"
 		} else if (strings.HasSuffix(groups[4], ".gif")) {
 			imageType = "image/gif"
+		} else if (strings.HasSuffix(groups[4], ".webp")) {
+			imageType = "image/webp"
 		} else {
 			// Unknown type.
 			fmt.Printf("Skipping '%s': unknown file type\n", imagePath)
